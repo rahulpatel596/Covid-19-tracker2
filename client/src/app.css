@@ -1,0 +1,80 @@
+html,
+body {
+  background-color: #fafafa;
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  position: relative;
+  font-weight: normal;
+
+  scroll-behavior: smooth;
+}
+
+header {
+  /* width: 90%; */
+  margin: auto;
+  height: 50%;
+}
+
+.navContainer {
+  color: #000;
+  background-color: #fff;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 40px;
+  z-index: 2;
+}
+
+.nav-ul {
+  display: flex;
+  color: #000;
+  /* width: 90%; */
+  justify-content: space-between;
+  margin-left: 5%;
+}
+
+.nav-link {
+  color: #000;
+  flex: 1;
+  /* color: #000; */
+  text-decoration: none;
+}
+a,
+a:hover {
+  color: #000;
+  /* color: #000; */
+}
+
+main {
+  position: relative;
+  /* top: 15%; */
+}
+
+.mapbox {
+  /* position: relative; */
+  margin-left: 5%;
+}
+table {
+  margin-left: 5%;
+}
+
+.radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+.radio-toolbar label {
+  width: 270px;
+  display: inline-block;
+  /* background-color: #ddd; */
+  padding: 10px 20px;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  border: 2px solid #4545a4;
+  border-radius: 4px;
+}
+.radio-toolbar label + input[type="radio"]:checked {
+  background-color: #bfb;
+  border-color: #4c4;
+  text-decoration: underline;
+}
