@@ -78,3 +78,10 @@ table {
   border-color: #4c4;
   text-decoration: underline;
 }
+#searchBar {
+  transition: box-shadow 0.3s;
+}
+
+#searchBar:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}

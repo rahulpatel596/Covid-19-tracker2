@@ -8,28 +8,28 @@ class Navigation extends React.Component {
         <nav>
           <ul className="nav-ul">
             <li className="nav-link">
-              <p>Covid-19 tracker</p>
+              <Link to="/" exact>
+                Covid-19 tracker
+              </Link>
             </li>
             <li className="nav-link">
-              <a href="#mapboxID">Map</a>
+              <Link to="/about">About</Link>
             </li>
             <li className="nav-link">
-              <a href="#">Graphs</a>
-            </li>
-            <li className="nav-link">
-              <a href="http://localhost:3000/#dataTableID">Country data</a>
-            </li>
-            <li className="nav-link">
-              <div
-                style={{
-                  borderRadius: "15px",
-                  width: "90%",
-                  border: "1px solid white",
-                  textAlign: " center"
-                }}
-              >
-                <Link to="/searchCountry"> Search for country</Link>
-              </div>
+              <Link to="/searchCountry" exact>
+                {" "}
+                <div
+                  style={{
+                    borderRadius: "15px",
+                    border: "1px solid black",
+                    width: "90%",
+
+                    textAlign: " center"
+                  }}
+                >
+                  Search for country
+                </div>
+              </Link>
             </li>
           </ul>
         </nav>

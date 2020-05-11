@@ -10,7 +10,7 @@ import SearchPage from "./components/searchPage";
 import GlobalChart from "./components/globalChart";
 
 import DoctorSVG from "./images/Untitled.svg";
-import ThreeLineSVG from "./images/connecting-line-5.svg";
+import ThreeLineSVG from "./images/Untitledlines.svg";
 
 const anchorRef = React.createRef();
 
@@ -99,7 +99,7 @@ class App extends React.Component {
                       src={ThreeLineSVG}
                     ></img>
                   </div>
-                  <div>{chart}</div>
+                  <div id="chartID">{chart}</div>
 
                   <div id="mapboxID" style={{ marginTop: "10%" }}>
                     <MapBoxComponent
