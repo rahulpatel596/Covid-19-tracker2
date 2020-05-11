@@ -103,7 +103,7 @@ class ChartComp extends React.Component {
           height: "460px",
 
           boxShadow: "0 2px 8px -6px black",
-          marginTop: "100px",
+          marginTop: "50px",
           marginLeft: "15%"
         }}
       >

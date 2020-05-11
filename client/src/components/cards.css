@@ -12,21 +12,18 @@
 
 .ind-card {
   display: flex;
-  /* height: 100px; */
-  /* justify-content: space-around; */
+  justify-content: space-around;
   height: 100px;
   width: 100px;
   flex-direction: column;
-  text-align: left;
-  /* border: 2px solid black; */
   box-shadow: 0 2px 8px -6px black;
 }
 
 .card-title {
+  margin-top: 15px;
   font-style: normal;
   font-weight: bolder;
   font-size: 24px;
-  text-decoration: underline;
 }
 
 .card-content {

@@ -22,7 +22,7 @@ class Cards extends React.Component {
           }}
         >
           <p className="card-title">{this.props.cardTitle}</p>
-          <br></br>
+
           <p style={{ color: this.props.borderColor }} className="card-content">
             {this.props.cardContent}
           </p>

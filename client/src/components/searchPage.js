@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import Navigation from "./navigation";
 import ChartComp from "./chartComp";
-// import GlobalChart from "./globalChart";
 import "../app.css";
 
 class SearchPage extends React.Component {
@@ -12,7 +11,6 @@ class SearchPage extends React.Component {
       didSearch: false,
       countrySpecificData: [],
       currentCountryData: []
-      // globalHistoricalData: []
     };
   }
 
@@ -45,18 +43,60 @@ class SearchPage extends React.Component {
       this.state.currentCountryData !== null &&
       this.state.currentCountryData !== undefined
     ) {
-      console.log(this.state.currentCountryData.cases);
       chart = (
         <div
           style={{
             height: "460px",
-            marginTop: "10%"
+            marginTop: "2%"
           }}
         >
-          <ChartComp
-            // incomingLabel="infected Cases"
-            currentCountryData={this.state.currentCountryData}
-          />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              width: "75%",
+              marginLeft: "12%",
+              justifyContent: "space-around"
+            }}
+          >
+            <div
+              style={{
+                borderBottom: "2px solid blue",
+                width: "200px",
+                borderRadius: "11px",
+                textAlign: "center",
+                boxShadow: "0 2px 8px -6px black"
+              }}
+            >
+              <p>10,0334</p>
+              <p>Infected</p>
+            </div>
+            <div
+              style={{
+                borderBottom: "2px solid red",
+                width: "200px",
+                borderRadius: "11px",
+                textAlign: "center",
+                boxShadow: "0 2px 8px -6px black"
+              }}
+            >
+              <p>10,0334</p>
+              <p>Deaths</p>
+            </div>
+            <div
+              style={{
+                borderBottom: "2px solid green",
+                width: "200px",
+                borderRadius: "11px",
+                textAlign: "center",
+                boxShadow: "0 2px 8px -6px black"
+              }}
+            >
+              <p>10,0334</p>
+              <p>Recovered</p>
+            </div>
+          </div>
+          <ChartComp currentCountryData={this.state.currentCountryData} />
         </div>
       );
     }
@@ -95,8 +135,7 @@ class SearchPage extends React.Component {
                 borderRadius: "30px",
                 borderStyle: "none",
                 color: "white",
-
-                backgroundColor: "green"
+                backgroundColor: "#4545a4"
               }}
               type="submit"
             >
@@ -104,6 +143,7 @@ class SearchPage extends React.Component {
             </button>
           </form>
         </div>
+
         <div>
           <div>{chart}</div>
         </div>
