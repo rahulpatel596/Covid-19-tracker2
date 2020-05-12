@@ -1,0 +1,87 @@
+#searchContainer {
+  margin-top: 25%;
+  margin-left: 30%;
+  transition: all 0.8s ease;
+}
+
+#mainContainer {
+  height: 460px;
+  margin-top: 2%;
+}
+
+#searchBar {
+  height: 40px;
+  width: 45%;
+  margin-right: 30px;
+  border-radius: 3px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+#searchButton {
+  height: 40px;
+  font-weight: bold;
+  width: 20%;
+  border-radius: 30px;
+  border-style: none;
+  color: white;
+  background-color: #4545a4;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+
+  margin-left: 12%;
+  justify-content: space-around;
+}
+
+.searchPageCards {
+  border-bottom: 2px solid green;
+  width: 200px;
+  border-radius: 11px;
+  text-align: center;
+  box-shadow: 0 2px 8px -6px black;
+}
+
+form {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  #searchContainer {
+    margin-top: 70%;
+    margin-left: 20%;
+    position: absolute;
+    transition: margin 0.7 ease;
+  }
+
+  #searchBar {
+    width: 100%;
+  }
+  #searchButton {
+    width: 70%;
+    top: 10px;
+    left: 15%;
+    position: relative;
+  }
+  form {
+    display: flex;
+    position: relative;
+    z-index: 100;
+    flex-direction: column;
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #mainContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35%;
+    /* position: relative; */
+  }
+}

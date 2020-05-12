@@ -107,7 +107,7 @@ class ChartComp extends React.Component {
           marginLeft: "15%"
         }}
       >
-        <div class="radio-toolbar" style={{ textAlign: "center" }}>
+        <div className="radio-toolbar" style={{ textAlign: "center" }}>
           <input
             type="radio"
             name="button1"
@@ -117,7 +117,7 @@ class ChartComp extends React.Component {
               this.HandleInfectedClick(event, true, false, false)
             }
           />
-          <label for="button1">Infected</label>
+          <label htmlFor="button1">Infected</label>
           <input
             type="radio"
             name="button2"
@@ -127,7 +127,7 @@ class ChartComp extends React.Component {
               this.HandleInfectedClick(event, false, true, false)
             }
           />
-          <label for="button2">Deaths</label>
+          <label htmlFor="button2">Deaths</label>
           <input
             type="radio"
             name="button3"
@@ -137,7 +137,7 @@ class ChartComp extends React.Component {
               this.HandleInfectedClick(event, false, false, true)
             }
           />
-          <label for="button3">Recovered</label>
+          <label htmlFor="button3">Recovered</label>
         </div>
         <div style={{ transitionTimingFunction: "ease-in-out", height: "85%" }}>
           <Line

@@ -118,7 +118,7 @@ class GlobalChart extends React.Component {
               this.HandleInfectedClick(event, true, false, false)
             }
           />
-          <label for="button1">Infected</label>
+          <label htmlFor="button1">Infected</label>
           <input
             type="radio"
             name="button2"
@@ -128,7 +128,7 @@ class GlobalChart extends React.Component {
               this.HandleInfectedClick(event, false, true, false)
             }
           />
-          <label for="button2">Deaths</label>
+          <label htmlFor="button2">Deaths</label>
           <input
             type="radio"
             name="button3"
@@ -138,7 +138,7 @@ class GlobalChart extends React.Component {
               this.HandleInfectedClick(event, false, false, true)
             }
           />
-          <label for="button3">Recovered</label>
+          <label htmlFfor="button3">Recovered</label>
         </div>
         <div>
           <Line

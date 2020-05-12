@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import Card from "./card";
-import style from "./cards.css";
 
 class Cards extends React.Component {
   render() {
