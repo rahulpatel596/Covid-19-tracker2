@@ -5,9 +5,18 @@ class MapBoxComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sortDirection: false
+      sortByCountry: true,
+      sortByCases: false,
+      sortByDeath: false,
+      sortByCasePerMillion: false
     };
   }
+
+  sorting = (sortByCountry, sortByCases, sortByDeath, sortByCasePerMillion) => {
+    // switch ((sortByCountry, sortByCases, sortByDeath, sortByCasePerMillion)) {
+    //   case (true, false, false, false):
+    // }
+  };
 
   render() {
     return (
@@ -15,7 +24,12 @@ class MapBoxComponent extends React.Component {
         <table>
           <thead id="mainTableHead">
             <tr>
-              <th>Country</th>
+              <th>
+                Country{" "}
+                <button onClick={this.sorting(true, false, false, false)}>
+                  sort
+                </button>
+              </th>
               <th>cases</th>
               <th>deaths</th>
               <th>cases today</th>

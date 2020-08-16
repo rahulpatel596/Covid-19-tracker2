@@ -7,7 +7,7 @@ class Navigation extends React.Component {
       <div className="navContainer">
         <nav>
           <ul className="nav-ul">
-            <li className="nav-link">
+            <li className="nav-link" style={{ fontWeight: "bold" }}>
               <Link to="/" exact>
                 Covid-19 tracker
               </Link>

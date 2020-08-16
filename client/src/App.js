@@ -8,11 +8,10 @@ import Navigation from "./components/navigation";
 import Cards from "./components/cards";
 import SearchPage from "./components/searchPage";
 import GlobalChart from "./components/globalChart";
+import About from "./components/about";
 
 import DoctorSVG from "./images/Untitled.svg";
 import ThreeLineSVG from "./images/Untitledlines.svg";
-
-const anchorRef = React.createRef();
 
 class App extends React.Component {
   constructor(props) {
@@ -41,7 +40,18 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    this.gettingData();
+    fetch("https://corona.lmao.ninja/v2/countries")
+      .then(response => response.json())
+      .then(json => this.setState({ incomingCovidData: json }));
+
+    fetch("https://corona.lmao.ninja/v2/all")
+      .then(response => response.json())
+      .then(json => this.setState({ totalCurrentCases: json }));
+    fetch("https://corona.lmao.ninja/v2/historical/all")
+      .then(response => response.json())
+      .then(json =>
+        this.setState({ globalHistoricalData: json, loaded: true })
+      );
   }
 
   render() {
@@ -55,6 +65,7 @@ class App extends React.Component {
     return (
       <Router>
         <Route path="/searchCountry" exact component={SearchPage} />
+        <Route path="/about" exact component={About} />
 
         <Route
           path="/"
@@ -70,6 +81,7 @@ class App extends React.Component {
                   <div style={{ position: "relative" }}>
                     <div>
                       <img
+                        id="doctorImage"
                         src={DoctorSVG}
                         style={{
                           width: "600px",
@@ -116,6 +128,10 @@ class App extends React.Component {
                       incomingCovidData={this.state.incomingCovidData}
                     />
                   </div>
+
+                  <a href="#doctorImage" id="topButtonContainer">
+                    <img src="https://img.icons8.com/nolan/64/up-squared--v1.png"></img>
+                  </a>
                 </section>
               </main>
             </div>

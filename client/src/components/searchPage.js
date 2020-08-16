@@ -59,7 +59,7 @@ class SearchPage extends React.Component {
     ) {
       chart = (
         <div id="mainContainer">
-          <div className="cardContainer">
+          <div className="searchPageCardContainer">
             <div className="searchPageCards">
               <p>{this.state.countryStats.cases}</p>
               <p>Infected</p>
