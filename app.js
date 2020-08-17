@@ -7,5 +7,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(8080, () => {
-  console.log("server listening on 5000");
+  console.log("server listening on $PORT");
 });
