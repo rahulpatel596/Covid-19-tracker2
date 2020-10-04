@@ -25,14 +25,14 @@ class App extends React.Component {
   }
 
   gettingData = () => {
-    fetch("https://corona.lmao.ninja/v2/countries")
+    fetch("https://corona.lmao.ninja/v3/countries")
       .then(response => response.json())
       .then(json => this.setState({ incomingCovidData: json }));
 
-    fetch("https://corona.lmao.ninja/v2/all")
+    fetch("https://corona.lmao.ninja/v3/all")
       .then(response => response.json())
       .then(json => this.setState({ totalCurrentCases: json }));
-    fetch("https://corona.lmao.ninja/v2/historical/all")
+    fetch("https://corona.lmao.ninja/v3/historical/all")
       .then(response => response.json())
       .then(json =>
         this.setState({ globalHistoricalData: json, loaded: true })
@@ -40,14 +40,14 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    fetch("https://corona.lmao.ninja/v2/countries")
+    fetch("https://corona.lmao.ninja/v3/countries")
       .then(response => response.json())
       .then(json => this.setState({ incomingCovidData: json }));
 
-    fetch("https://corona.lmao.ninja/v2/all")
+    fetch("https://corona.lmao.ninja/v3/all")
       .then(response => response.json())
       .then(json => this.setState({ totalCurrentCases: json }));
-    fetch("https://corona.lmao.ninja/v2/historical/all")
+    fetch("https://corona.lmao.ninja/v3/historical/all")
       .then(response => response.json())
       .then(json =>
         this.setState({ globalHistoricalData: json, loaded: true })
