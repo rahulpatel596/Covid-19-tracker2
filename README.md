@@ -5,3 +5,13 @@
 * Displaying trends with Line graphs created using React Chart-js library.
 * Displayed data on world map using Mapbox.
 * Getting data from https://corona.lmao.ninja/ API
+
+Glimpse of app
+
+<h4>Home Page</h4>
+
+![](../master/client/src/images/homePage.png)
+
+<h4>Stats for individual country</h4>
+
+![](../master/client/src/images/ItalyStats.png)
